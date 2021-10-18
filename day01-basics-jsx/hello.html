@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="intuit"></div>
+        <script type="text/jsx">
+            //let h1 = React.createElement("h1", null, "Hello React");
+            let h1 = <h1>Hello React</h1>;  //JSX
+            ReactDOM.render(h1, document.getElementById("intuit"));
+        </script>
+    </body>
+</html>
