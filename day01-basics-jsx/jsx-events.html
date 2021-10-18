@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <!-- <button onclick="buttonClicked();">Click</button> -->
+        <div id="intuit"></div>
+        <script type="text/jsx">
+            //onClick, onChange, onFocus
+            //The event handler is a function reference
+
+            function buttonClicked() {
+                console.log("Button clicked");
+            }
+
+            let div = (<div>
+                <button onClick={buttonClicked}>Click</button>
+            </div>);
+
+            ReactDOM.render(div, document.getElementById("intuit")); //ReactDOM refers to Virtual DOM
+        </script>
+    </body>
+</html>        
