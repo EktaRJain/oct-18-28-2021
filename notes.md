@@ -37,6 +37,39 @@
 * The event handlers take in function reference in expressions
 * If you have an event handler function __function nameChanged() {}__, you will write __onChange={nameChanged}__
 
+### Components
+
+* Components are the basic building blocks in react applications
+* A component can be class-based or Function-based
+* A class based component is a class that extends Component class and overrides render method
+* __render()__ method returns the JSX of that component.
+* In other words, every component has its own UI defined using JSX syntax
+* Every component is an independently running object. It has its own UI, logic and data __(Remember MVC???)__
+
+``` javascript
+class Hello extends React.Component {
+  render() {
+  	return <h1>Hello World</h1>;
+  }
+}
+
+ReactDOM.render(<Hello/>, document.getElementById("root"));
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
