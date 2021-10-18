@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="intuit"></div>
+        <script type="text/jsx">
+            let date = new Date();
+            let message = "Welcome to React Training";
+
+            function getFooterNotes() {
+                return "Copyrights reserved, 2021";
+            }
+            let langs = ["Java", "Ruby", "Go"];
+            
+            function getLangs() {
+                let jsxArr = [];
+                for(let i=0; i<langs.length; i++) {
+                    let li = <li>{langs[i]}</li>
+                    jsxArr.push(li);
+                }
+                return jsxArr;
+            }
+
+            let div = (<div>
+                <h1>Today is {date.toLocaleDateString()}</h1>
+                <h2>{message}</h2>
+                
+                <ul>
+                    <li>{langs[0]}</li>
+                    <li>{langs[1]}</li>
+                    <li>{langs[2]}</li>
+                </ul>
+                <br/>
+                <ol>
+                    {getLangs()}
+                </ol>   
+                <br/><br/>
+                <h6>{getFooterNotes()}</h6>
+            </div>);
+
+            ReactDOM.render(div, document.getElementById("intuit")); //ReactDOM refers to Virtual DOM
+        </script>
+    </body>
+</html>        

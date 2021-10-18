@@ -27,3 +27,9 @@
 * It's not a valid JS syntax, so use Babel transpiler to compile to valid JS code
 * Has strict XML-like syntax. Every start tag should have an end tag
 * Has ONLY ONE ROOT element
+
+* JSX expressions are written within curly braces
+* You can refer to a property or call a function within the curly braces
+* You can dynamically construct JSX elements using expressions
+
+
