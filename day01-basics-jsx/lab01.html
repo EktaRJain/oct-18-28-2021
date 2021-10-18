@@ -20,7 +20,7 @@
                 //NOT THE CORRECT WAY TO DO; WE'LL REPLACE IT WITH "state"
                 let userName = document.getElementById("username").value;
                 let password = document.getElementById("password").value;
-                let result = <h3 className="wrong">Your username or password is incorrect</h3>;
+                let result = <h3 style={{color: "red", backgroundColor: "pink"}}>Your username or password is incorrect</h3>;
 
                 if(userName === "admin" && password === "admin123") {
                    result = <h3 className="correct">Logging in...</h3>; 
