@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <style>
+            .correct {
+                color: green;
+            }
+            .wrong {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="intuit"></div>
+        <script type="text/jsx">
+
+            function loginButtonClicked() {
+                //NOT THE CORRECT WAY TO DO; WE'LL REPLACE IT WITH "state"
+                let userName = document.getElementById("username").value;
+                let password = document.getElementById("password").value;
+                let result = <h3 className="wrong">Your username or password is incorrect</h3>;
+
+                if(userName === "admin" && password === "admin123") {
+                   result = <h3 className="correct">Logging in...</h3>; 
+                   document.getElementById("loginbtn").disabled = true;
+                } 
+                //NOT THE CORRECT WAY TO DO; WE'LL REPLACE IT WITH "state"
+                ReactDOM.render(result, document.getElementById("message"));
+            }
+
+            let loginForm = (<div>
+                <label>Username</label>
+                <input type="text" id="username"></input> <br/>
+                <label>Password</label>
+                <input type="password" id="password"></input> <br/>
+                <button id="loginbtn" onClick={loginButtonClicked}>Login</button>   
+                <div id="message"></div>    
+            </div>);
+            ReactDOM.render(loginForm, document.getElementById("intuit"));
+        </script>
+    </body>
+</html>    

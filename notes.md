@@ -33,3 +33,12 @@
 * You can dynamically construct JSX elements using expressions
 
 
+* JSX event handlers use Camelcase; onClick, onFocus, onChange etc.
+* The event handlers take in function reference in expressions
+* If you have an event handler function __function nameChanged() {}__, you will write __onChange={nameChanged}__
+
+
+
+
+
+
