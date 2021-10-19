@@ -25,7 +25,12 @@
                         message: '',
                         messageCls: '',
                         valid: false,
-                        display: 'block'
+                        display: 'block',
+                        person: {},
+                        car: {
+                            engine: {}
+                        },
+                        books: []
                     };
                     this.userNameChanged = this.userNameChanged.bind(this);
                     this.passwordChanged = this.passwordChanged.bind(this);
@@ -64,6 +69,7 @@
 
                 render() {
                     let loginForm = (<div>
+                        <h2 style={{display: `${this.state.valid ? 'none' : 'block'}`}}>Heading</h2>
                         <label>Username</label>
                         <input type="text" onChange={this.userNameChanged}></input> <br/>
                         <label>Password</label>
