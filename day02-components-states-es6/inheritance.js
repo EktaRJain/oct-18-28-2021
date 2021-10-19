@@ -11,6 +11,7 @@ class Employee {
 class Manager extends Employee {
     constructor(name, salary, level) {
         super(name, salary);
+        this.level = level;
     }
     work(hours) {
         super.work(hours);
