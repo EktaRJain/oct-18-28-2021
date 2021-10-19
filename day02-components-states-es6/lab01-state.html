@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <style>
+            .correct {
+                color: green;
+            }
+            .wrong {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/jsx">
+
+            class Lab01 extends React.Component {
+                constructor(props) {
+                    super(props);
+                    this.state = {
+                        userName: '',
+                        password: '',
+                        message: '',
+                        messageCls: '',
+                        valid: false,
+                        display: 'block'
+                    };
+                    this.userNameChanged = this.userNameChanged.bind(this);
+                    this.passwordChanged = this.passwordChanged.bind(this);
+                    this.loginButtonClicked = this.loginButtonClicked.bind(this);
+                }
+
+                userNameChanged(e) {
+                    this.setState({
+                        userName: e.currentTarget.value
+                    });
+                }
+
+                passwordChanged(e) {
+                    this.setState({
+                        password: e.currentTarget.value
+                    });
+                }
+
+                loginButtonClicked() {
+                   let {userName, password} = this.state;
+                   if(userName === "admin" && password === "admin123") {
+                       this.setState({
+                           message: 'Logging in',
+                           messageCls: 'correct',
+                           valid: true,
+                           display: 'none'
+                        });
+                   } else {
+                        this.setState({
+                            message: 'Your username or password is incorrect',
+                            messageCls: 'wrong',
+                            valid: false
+                        });
+                   }
+                }
+
+                render() {
+                    let loginForm = (<div>
+                        <label>Username</label>
+                        <input type="text" onChange={this.userNameChanged}></input> <br/>
+                        <label>Password</label>
+                        <input type="password" onChange={this.passwordChanged}></input> <br/>
+                        <button style={{display: this.state.display}} 
+                            disabled={this.state.valid} onClick={this.loginButtonClicked}>Login</button>   
+                        <div className={this.state.messageCls}>{this.state.message}</div>    
+                    </div>);
+                    return loginForm;
+                }
+            }
+
+           
+            ReactDOM.render(<Lab01/>, document.getElementById("root"));
+        </script>
+    </body>
+</html>    
