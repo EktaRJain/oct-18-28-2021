@@ -8,15 +8,41 @@
         <div id="root"></div>
         <script type="text/jsx">
             class Display extends React.Component {
-                
-                getTimeButtonClicked() {
 
+                constructor(props) {
+                    super(props); //IGNORE THIS FOR NOW
+                    this.state = {
+                        currentTime: '',
+                        currentTemperature: ''
+                    };
+
+                    this.getTimeButtonClicked = this.getTimeButtonClicked.bind(this); //WILL EXPLAIN LATER
+                    this.getTemperatureButtonClicked = this.getTemperatureButtonClicked.bind(this); //WILL EXPLAIN LATER
+                }
+
+                getTemperatureButtonClicked() {
+                     let temperature = Math.random() * 50;
+                     this.setState({
+                         currentTemperature: temperature
+                     });   
+                }
+                getTimeButtonClicked() {
+                    let now = new Date().toLocaleTimeString();
+                    //this.state.currentTime = now; 
+                    
+                    //render() method is called internally
+                    this.setState({
+                        currentTime: now
+                    });
                 }
 
                 render() {
                     return (<div>
                         <button onClick={this.getTimeButtonClicked}>Get time</button>
-                        <h2></h2>
+                        <h2>{this.state.currentTime}</h2>
+                        <hr/>
+                        <button onClick={this.getTemperatureButtonClicked}>Get temperature</button>
+                        <h2>{this.state.currentTemperature}</h2>
                     </div>);
                 }
             }
