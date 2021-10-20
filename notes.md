@@ -66,6 +66,19 @@ ReactDOM.render(<Hello/>, document.getElementById("root"));
 * Modifying the state re-renders the UI again
 * __render()__ method is called whenever __setState()__ is invoked
 
+* Calling __setState__ creates a new __Virtual DOM tree__
+* The previous Virtual DOM tree is compared with the current one
+* If there are no changes, then the current tree is discarded
+* If there are changes, the previous Virtual DOM tree is discarded and the changes are flushed out to the real DOM tree
+
+* __DocumentFragment__ is usually used to update the real DOM in an optimized 
+* You can read more on these two topics __Diffing algorithm__; __Reconciliation__ 
+
+* __setState()__ executes asynchronously
+* DO NOT access the state immediately after calling setState
+* state may not yet be updated
+* Use a callback function instead
+
 ### create-react-app
 
 * sudo npm i -g create-react-app
