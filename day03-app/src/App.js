@@ -8,6 +8,7 @@ import MyHeader, { YourHeader } from './Header';
 import Game from './lab03/Game';
 import StateExample from './StateExample';
 import Lifecycle from './Lifecycle';
+import Person from './Person';
 //import Myheader from './Header';
 
 class App extends Component {
@@ -15,7 +16,11 @@ class App extends Component {
   render() {
     return (
       <div className="App"> 
-        <Lifecycle/>
+        <Person name="Ram" age="12"/>
+        <hr/>
+        <Person name="Sam" age="23"/>
+        <hr/>
+        <Person name="Varsha" age="34"/>
       </div>
     );
   }
