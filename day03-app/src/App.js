@@ -5,6 +5,7 @@ import React from 'react';
 import Footer from './Footer';
 import Lab01 from './Lab01';
 import MyHeader, { YourHeader } from './Header';
+import Game from './lab03/Game';
 //import Myheader from './Header';
 
 class App extends Component {
@@ -12,13 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className="App"> 
-        <MyHeader/>
-        <hr/>
-        <YourHeader/>
-        <br/><br/>
-        <Lab01/>
-        <br/><br/><br/><br/><br/>
-        <Footer/>
+        <Game/>
       </div>
     );
   }
