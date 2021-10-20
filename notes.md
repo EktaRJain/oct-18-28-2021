@@ -56,6 +56,36 @@ class Hello extends React.Component {
 ReactDOM.render(<Hello/>, document.getElementById("root"));
 ```
 
+### States
+
+* State represents the data model in a component
+* It's plain JSON data
+* You define a state using __this.state = {...}__
+* State is bound to the UI
+* You can modify the state using __setState({...})__ method
+* Modifying the state re-renders the UI again
+* __render()__ method is called whenever __setState()__ is invoked
+
+### create-react-app
+
+* sudo npm i -g create-react-app
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
