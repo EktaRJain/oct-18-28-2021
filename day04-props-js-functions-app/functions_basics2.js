@@ -36,9 +36,23 @@ doSomething(function() {
 });
 
 
+function myMath(operation) {
+    let num1 = 10;
+    let num2 = 20;
+    operation(num1, num2);
+}
 
+function subtract(a, b) {
+    console.log(a - b);
+}
 
+function multiply(a, b) {
+    console.log(a * b);
+}
 
+myMath(subtract);
+myMath(multiply);
+myMath(function(a, b) { console.log(a*a + b*b + 2*a*b); });
 
 
 
