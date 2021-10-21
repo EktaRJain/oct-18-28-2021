@@ -6,8 +6,8 @@ import { Component } from "react";
          this.state = {
              name: ''
          };
-         this.nameChanged = this.nameChanged.bind(this);
-         this.buttonClicked = this.buttonClicked.bind(this);
+        //  this.nameChanged = this.nameChanged.bind(this);
+        //  this.buttonClicked = this.buttonClicked.bind(this);
      }
 
      nameChanged(e) {
@@ -20,8 +20,8 @@ import { Component } from "react";
 
      render() {
          return (<div>
-             <input type="text" placeholder="Name" onChange={this.nameChanged}></input> <br/>
-             <button onClick={this.buttonClicked}>Submit</button>
+             <input type="text" placeholder="Name" onChange={this.nameChanged.bind(this)}></input> <br/>
+             <button onClick={this.buttonClicked.bind(this)}>Submit</button>
          </div>);
      }
  }

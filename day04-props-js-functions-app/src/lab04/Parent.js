@@ -8,7 +8,7 @@ class Parent extends Component {
         this.state = {
             message: ''
         };
-        this.computeMessage = this.computeMessage.bind(this);
+        //this.computeMessage = this.computeMessage.bind(this);
     }
 
     computeMessage(name) {
@@ -19,7 +19,7 @@ class Parent extends Component {
 
     render() {
         return (<div>
-            <Input clickHandler={this.computeMessage}/>
+            <Input clickHandler={this.computeMessage.bind(this)}/>
             <hr/>
             <Output message={this.state.message}/>
         </div>);
