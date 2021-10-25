@@ -6,11 +6,15 @@ class CovidGrid extends Component {
         super(props);
     }
 
+    itemClicked(country) {
+        this.props.summaryDisplayHandler(country);
+    }
+
     populateRows() {
         let {data} = this.props
         let rows = [];
         data.forEach(it => {
-            let row = <CovidGridRow country={it.country} cases={it.cases}/>
+            let row = <CovidGridRow itemClickedHandler={(country) => this.itemClicked(country)} country={it.country} cases={it.cases}/>
             rows.push(row);
         });
         return rows;

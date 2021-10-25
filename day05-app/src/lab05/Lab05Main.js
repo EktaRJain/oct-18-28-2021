@@ -12,15 +12,29 @@ class Lab05Main extends Component {
                 { "country": "Spain", "cases": 95923, "recovered": 19259, "deaths": 8464 },
                 { "country": "France", "cases": 52128, "recovered": 9444, "deaths": 3523 },
                 { "country": "India", "cases": 1590, "recovered": 148, "deaths": 45 }
-            ]
+            ],
+            summaryToDisplay: null
         };
+    }
+    
+    displaySummary(country) {
+        let {covidData} = this.state;
+        let countryInfo = covidData.find(it => it.country === country);
+        this.setState({
+            summaryToDisplay: countryInfo
+        });
     }
 
     render() {
         return (<div>
-            <CovidGrid data={this.state.covidData}/>
+            <CovidGrid summaryDisplayHandler={(country) => this.displaySummary(country)} data={this.state.covidData}/>
             <hr/>
-            <CovidSummary/>
+            { 
+                this.state. summaryToDisplay === null ? 
+                <span/> 
+                : 
+                <CovidSummary data={this.state.summaryToDisplay}/>
+            }
         </div>);
     }
 }
