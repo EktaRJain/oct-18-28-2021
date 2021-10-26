@@ -1,3 +1,4 @@
+* Create lab06.js file
 * Here's a small exercise that will help you get accustomed to functional style of coding in JavaScript. 
 
 * Create an array of numbers __11, 24, 63, 42, 15, 96, 30, 56, 84, 23, 100__
