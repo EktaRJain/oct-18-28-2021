@@ -5,6 +5,7 @@ const StateExample = () => {
 
     const [currentTime, setCurrentTime] = useState('');
     const [temperature, setTemperature] = useState('');
+    const [randomNo, setRandomNo] = useState(0);
 
     const getTimeButtonClicked = () => {
         setCurrentTime(new Date().toLocaleTimeString());
@@ -20,6 +21,9 @@ const StateExample = () => {
         <hr/>
         <button onClick={getTemperatureButtonClicked}>Get temperature</button>
         <h1>{temperature}</h1>
+        <hr/>
+        <button onClick={() => setRandomNo(Math.random() * 1000)}>Get some random number</button>
+        <h1>{randomNo}</h1>
     </div>);
 };
 
