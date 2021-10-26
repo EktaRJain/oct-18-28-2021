@@ -3,6 +3,7 @@ import './App.css';
 import Collections from './Collections';
 import FuncExample1 from './FuncExample1';
 import StateExample from './StateExample';
+import StateExample2 from './StateExample2';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <FuncExample1 title="Function components"/>
       <br/>
       <br/>
-      <StateExample/>
+      <StateExample2/>
     </div>
   );
 }
