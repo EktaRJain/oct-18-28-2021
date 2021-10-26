@@ -1,6 +1,12 @@
 .App {
   text-align: center;
 }
+.correct {
+  color: green;
+}
+.incorrect {
+  color: red;
+}
 
 .App-logo {
   height: 40vmin;
