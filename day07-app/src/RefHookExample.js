@@ -14,6 +14,7 @@ const RefHookExample = () => {
     return (<div>
         <input type="text" placeholder="name" ref={nameText}></input><br/>
         <button ref={btn} onClick={buttonClicked}>Click</button>
+        <button onClick={() => setMessage(`Hello ${nameText.current.value}`)}>Click</button>
         <h1>{message}</h1>
     </div>)
 };
