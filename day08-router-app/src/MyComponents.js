@@ -49,5 +49,6 @@ export const BookDetails = () => {
         <h3>Name: {name}</h3>
         <hr/>
         <button onClick={showList}>Go back to list</button>
+        <button><Link to="/books">Go back to list</Link></button>
     </div>)
 }
